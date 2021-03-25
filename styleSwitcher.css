@@ -1,0 +1,96 @@
+.style-switcher{
+    position: fixed;
+    top: 20px;
+    right: 0;
+    z-index: 10;
+    background-color: #fff;
+    padding: 15px;
+    border: 1px solid #d4d4e3;
+    border-right: none;
+    border-radius: 0 0 0 5px;
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+    transition: all .3s ease;
+    -webkit-transition: all .3s ease;
+}
+
+body.dark .style-switcher{
+    background-color: #222222;
+    border: 1px solid #393939;
+}
+.style-switcher.open{
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+}
+.style-switcher h5{
+    font-size: 16px;
+    color: #302e4d;
+    margin-top: 0;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #e8dfec;
+    margin-bottom: 5px;
+}
+body.dark .style-switcher h4,
+body.dark .style-switcher h5{
+    color: #fff;
+    border-bottom: 1px solid #393939;
+}
+.style-switcher h4{
+    font-size: 13px;
+    color: #302e4d;
+    margin-top: 0;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #e8dfec;
+    margin-bottom: 5px;
+}
+body.dark .style-switcher h4{
+    border-bottom: 1px solid #393939;
+}
+.style-switcher ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: block;
+    margin-bottom: 5px;
+}
+.style-switcher ul li{
+    display: inline-block;
+}
+.style-switcher ul li a{
+    height: 30px;
+    width: 30px;
+    display: block;
+    border-radius: 50%;
+    text-decoration: none;
+    margin-right: 3px;
+}
+.style-switcher .toggle-switcher{
+    position: absolute;
+    height: 45px;
+    width: 45px;
+    background-color: #fff;
+    left: -46px;
+    top: -1px;
+    border: 1px solid #d4d4e3;
+    border-right: none;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 5px 0 0 5px;
+}
+body.dark .style-switcher .toggle-switcher{
+    background-color: #222222;
+    border: 1px solid #393939;
+}
+.style-switcher .toggle-switcher .fas{
+    font-size: 20px;
+    line-height: 45px;
+}
+body.dark .style-switcher .toggle-switcher .fas{
+    color: #ffffff;
+}
+
+@media (max-width: 619px){
+    .style-switcher{
+        top: 55px;
+    }
+}
